@@ -84,25 +84,25 @@ h4 {
   transition: 0.2s;
 }
 
-.nav-item a:hover:after{
+.nav-item a:hover:after {
   width: 10%;
   border: 1px solid var(--orange);
   color: var(--orange) !important;
 }
 
-.nav-item a:focus:after{
+.nav-item a:focus:after {
   width: 10%;
   border: 1px solid var(--orange);
   color: var(--orange) !important;
 }
 
 @media (min-width: 992px) {
-  .nav-item a:hover:after{
+  .nav-item a:hover:after {
     width: 50%;
     border: 1px solid var(--orange);
     color: var(--orange) !important;
   }
-  .nav-item a:focus:after{
+  .nav-item a:focus:after {
     width: 50%;
     border: 1px solid var(--orange);
     color: var(--orange) !important;
@@ -183,32 +183,44 @@ h4 {
     margin-top: 0rem;
   }
   .header-info {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 }
 
+/* ------------ EC UTBILDNING -------------- */
+
 .ecutbildning {
-  padding: 5rem 0;
-  justify-content: space-around;
+  margin-top: 5rem;
 }
 
 @media (min-width: 768px) {
   .ecutbildning {
-    padding: 0 0 8rem 0;
+    margin-top: 5rem;
   }
 }
 
-@media (min-width: 992px) {
-  .ecutbildning {
-    padding: 6rem 0 9rem 0;
-  }
+.ecutbildning .owl-carousel .item {
+  width: 85%;
+  margin: 0 auto !important;
 }
 
-.ec-logo {
-  max-width: 27%;
+@media (min-width: 1200px) {
+  .ecutbildning .owl-carousel .item {
+    width: 70%;
+  }
 }
 
 /* ------------ ABOUT US -------------- */
+
+.about-us {
+  margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .about-us {
+    margin-top: 7rem;
+  }
+}
 
 .section-heading {
   background-color: rgba(255, 187, 0, 0.15);
@@ -258,7 +270,7 @@ h4 {
 @media (min-width: 1200px) {
   .about-us-img img {
     margin-left: -6rem;
-}
+  }
 }
 
 /* ------------ FEATURES -------------- */
@@ -319,7 +331,7 @@ h4 {
   .feature-mobile {
     margin-top: 0rem;
   }
-  
+
   .feature-mobile img {
     margin-left: 4rem;
   }
@@ -353,34 +365,95 @@ h4 {
   }
 }
 
-.screens-phones {
-  margin-top: 3rem;
+.owl-item > div {
+  margin: 1rem 1.5rem;
+  transition: margin 0.4s ease;
 }
 
-.screens-mobile-lg {
-  max-width: 90%;
+.owl-item.center > div {
+  margin: 0;
 }
 
-.screens-mobile-sm {
-  max-width: 90%;
+.owl-mobile .owl-item:not(.center) div {
+  margin-top: 2.5rem;
 }
 
-
-.phone-1,
-.phone-5 {
-  display: none;
-  opacity: 0.45;
-}
-
-.phone-2,
-.phone-4 {
+.owl-mobile .owl-item.active {
   opacity: 0.7;
 }
 
-@media (min-width: 768px) {
-  .phone-1,
-  .phone-5 {
-    display: initial;
+.owl-mobile .owl-item.active + div {
+  opacity: 1;
+}
+
+.owl-mobile .owl-item.active + div + div {
+  opacity: 0.7;
+}
+
+@media (min-width: 992px) {
+  .owl-mobile .owl-item.active {
+    opacity: 0.4;
+  }
+
+  .owl-mobile .owl-item.active + div {
+    opacity: 0.7;
+  }
+
+  .owl-mobile .owl-item.active + div + div {
+    opacity: 1;
+  }
+
+  .owl-mobile .owl-item.active + div + div + div {
+    opacity: 0.7;
+  }
+
+  .owl-mobile .owl-item.active + div + div + div + div {
+    opacity: 0.4;
+  }
+}
+
+.carousel-mobile {
+  margin-top: 5rem;
+}
+
+.carousel-mobile {
+  position: relative;
+  z-index: 1;
+}
+
+.center-mobile-case {
+  position: absolute;
+  z-index: -1;
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-mobile-case img {
+  width: 242px;
+}
+
+@media (max-width: 1199px) {
+  .center-mobile-case img {
+    width: 203px;
+  }
+}
+
+@media (max-width: 991px) {
+  .center-mobile-case img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .center-mobile-case img {
+    width: 185px;
+  }
+}
+
+@media (max-width: 376px) {
+  .center-mobile-case img {
+    width: 128px;
   }
 }
 
@@ -417,7 +490,8 @@ h4 {
   }
 }
 
-.statistics p {
+.statistics p,
+span {
   color: var(--blue);
   font-size: 2.2rem;
   font-weight: bold;
@@ -534,8 +608,8 @@ h4 {
   display: block;
   margin-top: 2rem;
   padding: 1.2rem 6rem;
-  border-radius: .7rem;
-  background-color: #3096FE;
+  border-radius: 0.7rem;
+  background-color: #3096fe;
   border: none;
 }
 
@@ -555,12 +629,11 @@ h4 {
   }
 }
 
-
 /* ------------ FOOTER -------------- */
 
 .footer-bg {
   background-image: url("img/footer-bg.png"),
-  linear-gradient(to right, #1487fd, #42a0ff);
+    linear-gradient(to right, #1487fd, #42a0ff);
   margin-top: 5rem;
   padding: 4rem 0;
 }
@@ -594,7 +667,7 @@ h4 {
 }
 
 .footer-social img {
-  padding: 0rem .4rem;
+  padding: 0rem 0.4rem;
 }
 
 @media (min-width: 768px) {
